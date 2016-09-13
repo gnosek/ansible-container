@@ -11,7 +11,7 @@ RUN apt-get update -y && \
     mkdir -p /etc/ansible/roles
 
 ADD builder.sh /usr/local/bin/builder.sh
-ADD ac_galaxy.py /usr/local/lib/python2.7/site-packages/ac_galaxy.py
+ADD ac_galaxy.py /usr/local/bin/ac_galaxy.py
 ADD ansible-container-inventory.py /etc/ansible/ansible-container-inventory.py
 ADD ansible.cfg /etc/ansible/ansible.cfg
 RUN pip install -q --no-cache-dir ansible==2.1.1.0 ruamel.yaml
